@@ -1,6 +1,6 @@
 
   // ==========================================================
-  // 🧱 KATEGORI 1: PROXY, VPN & WEB VM
+  //  KATEGORI 1: PROXY, VPN & WEB VM
   // ==========================================================
   "pr[o0]xy|proxies",
   "unbl[o0]ck(er|ing)?",
@@ -18,7 +18,7 @@
 "vmware",
 "browserling.com",
   // ==========================================================
-  // 🤖 KATEGORI 1.5: AI-WEBSTEDER
+  // KATEGORI 1.5: AI-WEBSTEDER
   // ==========================================================
   "chatgpt",
   "openai",
@@ -41,7 +41,7 @@
 "grok.com",
 
   // ==========================================================
-  // 💬 KATEGORI 2: SOCIALE MEDIER & CHAT
+  //  KATEGORI 2: SOCIALE MEDIER & CHAT
   // ==========================================================
   "tiktok",
   "snapchat",
@@ -52,7 +52,7 @@
   "twitch",
 
   // ==========================================================
-  // 🎮 KATEGORI 3: SPIL & TIDSFORDRIV
+  //  KATEGORI 3: SPIL & TIDSFORDRIV
   // ==========================================================
   "poki",
   "coolmathgame",
@@ -64,7 +64,7 @@
   "\\d{1,2}v\\d{1,2}",
 
   // ==========================================================
-  // 🎬 KATEGORI 4: STREAMING & PIRATKOPIERING
+  //  KATEGORI 4: STREAMING & PIRATKOPIERING
   // ==========================================================
   "netflix",
   "disneyplus",
@@ -76,7 +76,7 @@
   "piratebay",
 
   // ==========================================================
-  // 🚫 KATEGORI 5: PORNO, NSFW & UPASSENDE INDHOLD
+  //  KATEGORI 5: PORNO, NSFW & UPASSENDE INDHOLD
   // ==========================================================
   "porn",
  "en.wikipedia.org/wiki/File:Human_buttocks.jpg",
