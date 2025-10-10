@@ -118,6 +118,15 @@
   "\\blick\\b"
 
 
+// Den fanger specifikke brands OG generelle mønstre.
+  // Den er  sikrere end bare at blokere ordet "casino".
+  "casino|betting|gambling|poker|slots",
+
+  // Fanger specifikke store brands, som eleverne kender
+  "netbet|mariacasino|tivolicasino|bet365|888sport|spilnu|unibet|betfair|betsson|betway",
+  
+  // Et  mønster, der fanger "bet" efterflgt af tl, som i "bet365"
+  "bet\\d{3,}"
 
 https://www.snapchat.com/web
 snapchat.com
