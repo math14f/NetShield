@@ -1,3 +1,124 @@
+
+  // ==========================================================
+  // 🧱 KATEGORI 1: PROXY, VPN & WEB VM
+  // ==========================================================
+  "pr[o0]xy|proxies",
+  "unbl[o0]ck(er|ing)?",
+  "bypass|censor",
+  "tunnel",
+  "hideip|hideme|kproxy|croxyproxy|boomproxy|mywebproxy",
+  "schoolproxy|schoolunblock|freeproxy|freevpn|vpnschool",
+  "openvpn|webtunnel|ultrasurf|vpntunnel|vpnsafe",
+  "browser\\.lol",
+  "webvm",
+  "cloudvm",
+  "framevm|vmwarecloud|vncweb",
+  "shadowpc|now\\.gg|replit\\.com|codesandbox|glitch\\.me",
+"virtualbox",
+"vmware",
+"browserling.com",
+  // ==========================================================
+  // 🤖 KATEGORI 1.5: AI-WEBSTEDER
+  // ==========================================================
+  "chatgpt",
+  "openai",
+  "gpt-?4|gpt-?3|gpt-?3\\.5",
+  "bard",
+  "perplexity",
+  "you\\.com",
+  "huggingface",
+  "replicate",
+  "midjourney",
+  "dall[\\- ]?e|dalle",
+  "stable[- ]?diffusion",
+  "runwayml|runway",
+  "playground",
+  "copilot",
+  "anthropic|claude",
+  "chat\\.openai\\.com",
+"aistudio.google.com/prompts/new_chat",
+"gemini.google.com",
+"grok.com",
+
+  // ==========================================================
+  // 💬 KATEGORI 2: SOCIALE MEDIER & CHAT
+  // ==========================================================
+  "tiktok",
+  "snapchat",
+  "instagram",
+  "facebook",
+  "discord",
+  "reddit",
+  "twitch",
+
+  // ==========================================================
+  // 🎮 KATEGORI 3: SPIL & TIDSFORDRIV
+  // ==========================================================
+  "poki",
+  "coolmathgame",
+  "crazygames",
+  "friv",
+  "y8\\.com|y8games",
+  "kongregate",
+  "armorgames",
+  "\\d{1,2}v\\d{1,2}",
+
+  // ==========================================================
+  // 🎬 KATEGORI 4: STREAMING & PIRATKOPIERING
+  // ==========================================================
+  "netflix",
+  "disneyplus",
+  "hbo",
+  "viaplay",
+  "primevideo",
+  "putlocker|solarmovie|fmovies|123movies",
+  "1337x",
+  "piratebay",
+
+  // ==========================================================
+  // 🚫 KATEGORI 5: PORNO, NSFW & UPASSENDE INDHOLD
+  // ==========================================================
+  "porn",
+ "en.wikipedia.org/wiki/File:Human_buttocks.jpg",
+"fuq.com",
+  "xxx",
+  "xvideos",
+  "xnxx",
+  "redtube",
+  "youporn",
+  "brazzers",
+  "xhamster",
+  "onlyfans",
+  "nsfw",
+  "erotic",
+  "sex",
+  "camgirl|webcamgirls",
+  "adult",
+  "nude",
+  "escort",
+  "strip",
+  "fetish",
+  "rule34",
+"dinotube.com",
+  "hentai",
+  "18\\+",
+  "pornhub",
+  "spankbang",
+  "pornhd",
+   "tiava.com",
+  "tnaflix",
+"ei.phncdn.com",
+  "motherless",
+  "fap",
+  "\\bsex\\b",
+  "\\bbutt\\b",
+  "\\bass\\b",
+  "\\bboob\\b",
+  "\\bcum\\b",
+  "\\blick\\b"
+
+
+
 https://www.snapchat.com/web
 snapchat.com
 web.snapchat.com
