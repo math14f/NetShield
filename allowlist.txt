@@ -2,7 +2,6 @@
 // Domæner og nøgleord på denne liste vil ALDRIG blive blokeret,
 // selvom de indeholder et ord fra sortlisten.
 
-export const allowedSites = [
   // === Grundlæggende Systemer & Login ===
   "aula.dk",                  // Kommunikation i folkeskolen
   "lectio.dk",                // Udbredt på gymnasier (skema, afleveringer etc.)
@@ -104,5 +103,5 @@ export const allowedSites = [
   "quizlet.com",              // Læringsværktøj med flashcards og quizzer
   "socrative.com",            // Værktøj til quiz og elevrespons
   
-]; 
+
   
