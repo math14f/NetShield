@@ -1,0 +1,13 @@
+// Filnavn: force_block_sites.js
+// Dette er FORCE-BLOCK listen.
+// Sider på denne liste vil ALTID blive blokeret, selvom
+// en del af deres domæne (feks. "google.com") er på hvidlisten.
+
+export const forceBlockSites = [
+  // AI-værktøjer fra Google
+  "gemini.google.com",
+  "aistudio.google.com",
+
+  
+ "music.youtube.com"
+];
