@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "NetShield",
+  "version": "2.2",
+  "description": "Et centralt styret webfilter designet til skolemiljøer. Konfigureres via administrationskonsolle.",
+
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "alarms",
+    "storage"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  
+  "storage": {
+    "managed_schema": "schema.json"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": ["blocked.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

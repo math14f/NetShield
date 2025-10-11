@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "remoteBlocklistUrl": {
+      "type": "string",
+      "title": "URL til Sortliste",
+      "description": "Indtast den fulde 'raw' URL til .txt-filen med blokerings-domæner eller bare buge den indbygget man beste at have en ."
+    },
+    "remoteAllowlistUrl": {
+      "type": "string",
+      "title": "URL til Hvidliste",
+      "description": "Indtast den fulde 'raw' URL til .txt-filen med hvidliste-domæner kun hvis en skole side bliver block eller du vil unblock en der er på lokal liste men det sker ikke."
+    }
+  },
+}
