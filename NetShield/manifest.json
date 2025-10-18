@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "NetShield",
-  "version": "2.2",
-  "description": "Et centralt styret webfilter designet til skolemiljøer. Konfigureres via administrationskonsolle.",
+  "version": "3.3",
+  "description": "Til Skoler. Blokerer proaktivt de proxy, spil og AI-værktøjer Og meget mere, som eleverne bruger til at omgå traditionelle filtre..",
 
   "permissions": [
     "declarativeNetRequest",
@@ -19,6 +19,14 @@
     "service_worker": "background.js",
     "type": "module"
   },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_analyzer.js"],
+      "run_at": "document_start"
+    }
+  ],
   
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
