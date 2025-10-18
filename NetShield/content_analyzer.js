@@ -1,3 +1,5 @@
+// Copyright (c) 2025 Mathias Andersen - All Rights Reserved
+// NetShield - Under MIT License
 // Filnavn: content_analyzer.js
 // Version 3.2 - Med intelligent Referrer-baseret Whitelisting
 // den Ny der gøre NetShield til den best. 
