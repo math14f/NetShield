@@ -8,20 +8,20 @@ Hvorfor NetShield?
 
 NetShield er designet til at være en komplet afløser for forældede løsninger som LetSpær. Det er teknisk overlegent på alle afgørende punkter:
 
-🚀 Moderne & Fremtidssikret: Bygget på Googles nyeste Manifest V3 og den lynhurtige Declarative Net Request API. Dette sikrer maksimal ydeevne uden at gøre browseren langsommere og garanterer, at NetShield vil blive ved med at virke i fremtiden.
+Moderne & Fremtidssikret: Bygget på Googles nyeste Manifest V3 og den lynhurtige Declarative Net Request API. Dette sikrer maksimal ydeevne uden at gøre browseren langsommere og garanterer, at NetShield vil blive ved med at virke i fremtiden.
 
-🔒 100% Privatlivs-sikker (GDPR-venlig): Takket være DNR API'en kan NetShield teknisk set aldrig se, læse eller logge elevernes browsing-historik. Al filtrering sker lokalt i browserens kerne. Der sendes ingen persondata.
+ 100% Privatlivs-sikker (GDPR-venlig): Takket være DNR API'en kan NetShield teknisk set aldrig se, læse eller logge elevernes browsing-historik. Al filtrering sker lokalt i browserens kerne. Der sendes ingen persondata.
 
-🧠 Intelligent & Proaktiv Blokering: Bruger avancerede Regex-mønstre til at genkende og blokere tusindvis af ukendte proxy-sider, omgåelses-værktøjer og nye trusler, i det øjeblik de dukker op.
+ Intelligent & Proaktiv Blokering: Bruger avancerede Regex-mønstre til at genkende og blokere tusindvis af ukendte proxy-sider, omgåelses-værktøjer og nye trusler, i det øjeblik de dukker op.
 
-🤖 Avanceret Indholds-Analyse: En indbygget "agent" scanner aktivt hjemmesider for at finde skjulte trusler. Den kan:
+ Avanceret Indholds-Analyse: En indbygget "agent" scanner aktivt hjemmesider for at finde skjulte trusler. Den kan:
 Fjerne Google AI-oversigter: Fjerner dynamisk de AI-genererede svar direkte fra Googles søgeresultater for at modvirke snyd.
 Identificere skjulte proxy-sider: Genkender de tekniske "fingeraftryk" fra proxy-scripts, selv på sider med uskyldige navne.
 Opdage spil-portaler: Genkender spil baseret på den teknologi, de er bygget med (f.eks. Unity, Canvas), ikke kun deres navn.
 
-🕹️ Total Kontrol for Administratorer: NetShield er designet til central styring via Google Admin. Administratorer kan fjernstyre simple sort- og hvidlister via eksterne tekstfiler, hvilket gør daglig vedligeholdelse utrolig nem og hurtig.
+ Total Kontrol for Administratorer: NetShield er designet til central styring via Google Admin. Administratorer kan fjernstyre simple sort- og hvidlister via eksterne tekstfiler, hvilket gør daglig vedligeholdelse utrolig nem og hurtig.
 
-🛡️ Multi-Lags Forsvar: Et avanceret prioritetssystem med separate, specialiserede regelsæt (lokal/fjern, sortliste/hvidliste, force-block, billed-blokering) sikrer maksimal beskyttelse uden at blokere for kritisk undervisningsmateriale.
+ Multi-Lags Forsvar: Et avanceret prioritetssystem med separate, specialiserede regelsæt (lokal/fjern, sortliste/hvidliste, force-block, billed-blokering) sikrer maksimal beskyttelse uden at blokere for kritisk undervisningsmateriale.
 
 Arkitektur
 
