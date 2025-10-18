@@ -44,7 +44,7 @@ async function updateBlockingRules() {
     remoteAllowlistUrl: ''
   });
   
-  // Hent' lister fra de URL'er, han har indtastet
+  // Hent' lister fra de URL'er, 
   const [ remoteSimpleBlockedSites, remoteSimpleAllowedSites ] = await Promise.all([
     fetchRemoteList(settings.remoteBlocklistUrl),
     fetchRemoteList(settings.remoteAllowlistUrl)
@@ -58,13 +58,13 @@ async function updateBlockingRules() {
 
   let nextId = 1;
 
-  // Regel-sæt #1: DIN LOKALE BLOKERING (Bruger kraftfuld Regex)
+  // Regel-sæt #1:  LOKALE BLOKERING (Bruger kraftfuld Regex)
   const newRegexBlockingRules = localRegexBlockedSites.map(site => ({
     id: nextId++, priority: 1, action: { type: 'redirect', redirect: { extensionPath: '/blocked.html' } },
     condition: { regexFilter: `.*${site}.*`, resourceTypes: ['main_frame'] }
   }));
   
-  // Regel-sæt #2: CLAUS' FJERNSTYREDE BLOKERING (Bruger simpel, sikker urlFilter)
+  // Regel-sæt #2:  FJERNSTYREDE BLOKERING (Bruger simpel, sikker urlFilter)
   const newSimpleBlockingRules = remoteSimpleBlockedSites.map(site => ({
     id: nextId++, priority: 1, action: { type: 'redirect', redirect: { extensionPath: '/blocked.html' } },
     condition: { urlFilter: `*${site}*`, resourceTypes: ['main_frame'] }
@@ -76,7 +76,7 @@ async function updateBlockingRules() {
     condition: { urlFilter: `*${site}*`, resourceTypes: ['main_frame'] }
   }));
   
-  // Regel-sæt #4: CLAUS' FJERNSTYREDE HVIDLISTE (Bruger sikker urlFilter)
+  // Regel-sæt #4:  FJERNSTYREDE HVIDLISTE (Bruger sikker urlFilter)
   const newRemoteAllowRules = remoteSimpleAllowedSites.map(site => ({
     id: nextId++, priority: 2, action: { type: 'allow' },
     condition: { urlFilter: `*${site}*`, resourceTypes: ['main_frame'] }
@@ -108,3 +108,4 @@ async function updateBlockingRules() {
   }
 
 }
+
