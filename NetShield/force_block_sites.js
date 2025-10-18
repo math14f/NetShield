@@ -1,13 +1,13 @@
 // Filnavn: force_block_sites.js
-// Dette er FORCE-BLOCK listen.
-// Sider på denne liste vil ALTID blive blokeret, selvom
-// en del af deres domæne (f.eks. "google.com") er på hvidlisten.
+// Mønstre på denne liste vinder ALTID, selv over hvidlisten.
 
 export const forceBlockSites = [
-  // AI-værktøjer fra Google
-  "gemini.google.com",
-  "aistudio.google.com",
+  // Bloker Google-søgninger, der indeholder vores mest aggressive nøgleord af hvad jeg må finde
+  "google\\.com/search\\?.*(proxy|porn|xxx|unblock)",
 
-  // Andre eksempler (hvis man f.eks. vil tillade YouTube, men ikke YouTube Music)
-  // "music.youtube.com"
+  // Bloker specifikke Google-tjenester, vi ikke vil have som ai
+  "gemini\\.google\\.com",
+  "aistudio\\.google\\.com",
+  
+  // i kan spøger om hvad der skal tilføje som flere ultra-vigtige blokerings-mønstre her
 ];
