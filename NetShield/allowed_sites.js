@@ -1,7 +1,7 @@
 // Dette er HVIDLISTEN.
 // Domæner og nøgleord på denne liste vil ALDRIG blive blokeret,
 // selvom de indeholder et ord fra sortlisten.
-
+// lavet af Mathias.
 export const allowedSites = [
   // === Grundlæggende Systemer & Login ===
   "aula.dk",                  // Kommunikation i folkeskolen
@@ -41,7 +41,6 @@ export const allowedSites = [
   "ggpht.com",            // Bruges ofte til profilbilleder og andet billedindhold
   "fonts.googleapis.com", // Henter skrifttyper, så dokumenter ser rigtige ud
   "fonts.gstatic.com",    // Henter selve skrifttype-filerne
-
   "office.com",
 
   // === Nationale & Tværgående Portaler ===
@@ -103,6 +102,11 @@ export const allowedSites = [
   "kahoot.com",               // Spilbaseret læringsplatform
   "quizlet.com",              // Læringsværktøj med flashcards og quizzer
   "socrative.com",            // Værktøj til quiz og elevrespons
-  
+  "google.com/search?sca_esv=", 
+"google.com/search?num=12&sca_esv=",
+"www.google.com",
+"myaccount.google.com",
+"dr.dk",
+"www.dr.dk",
+"studio.flux3dp.com",
 ]; 
-  
