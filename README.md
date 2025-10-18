@@ -33,4 +33,4 @@ De Fjernstyrede Lister (Admin-styret): Via Google Admin kan administratoren pege
 Dette design sikrer en robust, fejlsikker og ekstremt fleksibel platform.
 
 Status
-Version 3.2 er i øjeblikket under gennemgang i Chrome Web Store.
+Version 3.2 er i øjeblikket under gennemgang i Chrome Web Store. link https://chromewebstore.google.com/detail/netshield/giihajigclffejnamppnoocgchebmagm?authuser=0&hl=da
