@@ -44,7 +44,7 @@ async function updateBlockingRules() {
     remoteAllowlistUrl: ''
   });
   
-  // Hent Claus' lister fra de URL'er, han har indtastet
+  // Hent' lister fra de URL'er, han har indtastet
   const [ remoteSimpleBlockedSites, remoteSimpleAllowedSites ] = await Promise.all([
     fetchRemoteList(settings.remoteBlocklistUrl),
     fetchRemoteList(settings.remoteAllowlistUrl)
@@ -106,4 +106,5 @@ async function updateBlockingRules() {
     console.log(`Lokale Regex Blokeringer: ${newRegexBlockingRules.length}, Admin's Simple Blokeringer: ${remoteSimpleBlockedSites.length}`);
     console.log(`Lokale Hvidlister: ${newLocalAllowRules.length}, Admin's Simple Hvidlister: ${remoteSimpleAllowedSites.length}`);
   }
+
 }
