@@ -34,3 +34,4 @@ Dette design sikrer en robust, fejlsikker og ekstremt fleksibel platform.
 
 Status
 Version 3.2 er i øjeblikket under gennemgang i Chrome Web Store. link https://chromewebstore.google.com/detail/netshield/giihajigclffejnamppnoocgchebmagm?authuser=0&hl=da
+og Version 3.3 er under udvikling man kommer snart
