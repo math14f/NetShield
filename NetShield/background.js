@@ -1,5 +1,7 @@
+// Copyright (c) 2025 Mathias Andersen - All Rights Reserved
+// NetShield - Under MIT License
 // Filnavn: background.js
-// Version 8.1 - Total Separation (Den Endelige Arkitektur)
+// Version 8.1 - Total Separation Den Endelige Arkitektur
 
 // Importerer de LOKALE, lister
 import { blockedSites as localRegexBlockedSites } from './blocked_sites.js';
@@ -108,4 +110,5 @@ async function updateBlockingRules() {
   }
 
 }
+
 
