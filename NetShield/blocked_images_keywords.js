@@ -1,5 +1,5 @@
 // Filnavn: blocked_images_keywords.js
-// Version 1.2 - opdateret med Word Boundaries
+// Version 1.3 - opdateret med Word Boundaries
 
 export const blockedImageKeywords = [
   // Generelle NSFW-termer
@@ -28,4 +28,5 @@ export const blockedImageKeywords = [
   "\\bpussy\\b",
   "\\bcock\\b",
   "\\bcum\\b",
+
 ];
