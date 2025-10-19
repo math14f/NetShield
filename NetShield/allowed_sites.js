@@ -102,11 +102,11 @@ export const allowedSites = [
   "kahoot.com",               // Spilbaseret læringsplatform
   "quizlet.com",              // Læringsværktøj med flashcards og quizzer
   "socrative.com",            // Værktøj til quiz og elevrespons
-  "google.com/search?sca_esv=", 
-"google.com/search?num=12&sca_esv=",
 "www.google.com",
 "myaccount.google.com",
 "dr.dk",
 "www.dr.dk",
 "studio.flux3dp.com",
+"xn--testogprver-ngb.dk", //vi kan ikke bruge æøå fordi chrome er ikke god til dansk og det er for at spar så der for bruge vi minifier så laver den et som chrome forstår. 
 ]; 
+
