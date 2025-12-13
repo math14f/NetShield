@@ -4,90 +4,178 @@
   <meta charset="UTF-8">
   <title>NetShield - Adgang Blokeret</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    /* Nulstil standard marginer */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f7f9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      color: #333;
+      /* Animeret baggrund */
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      overflow: hidden;
     }
 
-    .container {
-      text-align: center;
-      background-color: white;
-      padding: 50px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      max-width: 550px; /* Lidt bredere for at give plads til den nye tekst */
+    /* Selve kortet */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
       width: 90%;
+      max-width: 500px; /* Lidt bredere for at få plads til teksten */
+      padding: 50px 40px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      animation: slideUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
 
-    .logo {
+    /* Ikon cirkel */
+    .icon-wrapper {
       width: 80px;
       height: 80px;
-      margin-bottom: 20px;
+      background: #fee2e2;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 20px auto;
+      animation: pulse-red 2s infinite;
+    }
+
+    .icon-wrapper svg {
+      width: 40px;
+      height: 40px;
+      color: #ef4444;
     }
 
     h1 {
-      color: #d9534f;
-      font-size: 2.5em;
+      color: #1f2937;
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+
+    /* Hovedtekst */
+    p.main-text {
+      color: #4b5563;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+
+    /* Den nye Hjælpe-boks */
+    .help-box {
+      background-color: #f3f4f6;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 30px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .help-box p {
+      color: #6b7280;
+      font-size: 14px;
+      line-height: 1.4;
       margin: 0;
     }
 
-    p {
-      font-size: 1.1em;
-      line-height: 1.6;
-      color: #555;
-      margin-top: 15px;
+    .help-box strong {
+      color: #374151;
+      display: block;
+      margin-top: 5px;
     }
 
-    .help-section {
-      margin-top: 30px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
+    /* Knappen */
+    .btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      color: white;
+      padding: 14px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+      width: 100%; /* Knappen fylder hele bredden i boksen */
     }
 
-    .help-section p {
-      margin: 0;
-      color: #666;
-      font-size: 1em;
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
     }
 
     .footer {
-      margin-top: 30px;
-      font-size: 0.8em;
-      color: #aaa;
+      margin-top: 25px;
+      font-size: 11px;
+      color: #9ca3af;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Animationer */
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes pulse-red {
+      0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <img src="icon128.png" alt="NetShield Logo" class="logo">
-    <h1>Adgang Blokeret</h1>
-    <p>Denne side er blevet blokeret af <strong>NetShield</strong>, da den overtræder skolens IT-regler for acceptabel brug.</p>
+  <div class="glass-card">
+    <div class="icon-wrapper">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+      </svg>
+    </div>
 
-    <!-- === NYE === -->
-    <div class="help-section">
+    <h1>NetShield har stoppet siden</h1>
+    
+    <p class="main-text">
+      Denne side indeholder materiale, der ikke er godkendt til skolebrug, eller forsøger at omgå sikkerhedsreglerne.
+    </p>
+
+    
+    <div class="help-box">
       <p>Mener du, at denne blokering er en fejl, eller har du brug for adgang til siden i forbindelse med din undervisning?</p>
       <p><strong>Kontakt venligst din lærer eller skolens IT-ansvarlige.</strong></p>
     </div>
-    <!-- =================================== -->
 
-    <p style="margin-top: 30px;">Fokuser venligst på dit skolearbejde.</p>
-    
+    <button id="go-back-btn" class="btn">
+      Gå til Google
+    </button>
+
     <div class="footer">
-      NetShield v3.3
+      NetShield v3.5 • Beskytter din læring
+      <br>
+      Udviklet i Thisted
     </div>
   </div>
+
+  <script src="blocked.js"></script>
 
 </body>
 </html>
