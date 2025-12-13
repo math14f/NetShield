@@ -1,7 +1,7 @@
 // Dette er HVIDLISTEN.
 // Domæner og nøgleord på denne liste vil ALDRIG blive blokeret,
 // selvom de indeholder et ord fra sortlisten.
-// lavet af Mathias.
+
 export const allowedSites = [
   // === Grundlæggende Systemer & Login ===
   "aula.dk",                  // Kommunikation i folkeskolen
@@ -11,7 +11,8 @@ export const allowedSites = [
   "broker.unilogin.dk",       // Del af Uni-Login infrastrukturen
   "idp.unilogin.dk",          // Del af Uni-Login infrastrukturen
   "mitid.dk",                 // Nødvendigt for login på mange offentlige sider
- 
+"login.alineadigital.dk", 
+
   // === Læringsplatforme ===
   "minuddannelse.net",        // Læringsplatform, udbredt i mange kommuner
   "meebook.com",              // Digital læringsplatform
@@ -107,6 +108,5 @@ export const allowedSites = [
 "dr.dk",
 "www.dr.dk",
 "studio.flux3dp.com",
-"xn--testogprver-ngb.dk", //vi kan ikke bruge æøå fordi chrome er ikke god til dansk og det er for at spar så der for bruge vi minifier så laver den et som chrome forstår. 
+"xn--testogprver-ngb.dk",
 ]; 
-
