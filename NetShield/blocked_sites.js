@@ -1,5 +1,5 @@
 // Filnavn: blocked_sites.js
-// Version 3.0 - Optimeret med nøgleord fra snedsted skole liste' og research fra mig
+// Version 3.1 - Optimeret med nøgleord fra snedsted skole liste' og research fra mig
 
 export const blockedSites = [
   // ==========================================================
@@ -29,7 +29,7 @@ export const blockedSites = [
   // ==========================================================
   // 💬 KATEGORI 2: SOCIALE MEDIER, CHAT & FORA
   // ==========================================================
-  "tiktok|douyin", //  den kinesiske version håber jeg haha
+  "tiktok|douyin", //  den kinesiske version
   "snapchat",
   "instagram",
   "facebook|meta.ai",
@@ -49,7 +49,7 @@ export const blockedSites = [
   // ==========================================================
   // 🎮 KATEGORI 3: SPIL, SPIL-SIDER 
   // ==========================================================
-  "poki|kizi|friv|spilxl|gratisspil|bgames|agame|y8|y9|a10|miniclip", // Store spil-portaler
+  "poki|kizi|friv|spilxl|gratisspil|bgames|agame|y8|y9|a10|y100|miniclip", // Store spil-portaler
   "coolmathgame|crazygames|addictinggames|armorgames|kongregate|mousebreaker", // Flere portaler
   "roblox|fortnite|minecraft|epicgames", // Store spil
   "agar|slither|slope|cookieclicker|paper-io|amogus|amongus", // Specifikke populære spil
@@ -83,10 +83,13 @@ export const blockedSites = [
   // ==========================================================
   // Generelle termer, der er relativt sikre
   "gambling|poker|slots",
-
+"danskespil.dk",
   // Brands, 
   "mariacasino|tivolicasino|888sport|spilnu|unibet|leovegas|mrgreen",
-
+"www.g5.com",
+"boom.dk",
+"king.com",
+"gameforge.com",
   // Brands, der indeholder almindelige ord - disse kræver "Word Boundari"
   // Ved at adskille dem er de mere præcise.
   "\\bbetting\\b",
