@@ -1,8 +1,6 @@
-// Copyright (c) 2025 Mathias Andersen - All Rights Reserved
-// NetShield - Under MIT License
 // Filnavn: content_analyzer.js
-// Version 3.2 - Med intelligent Referrer-baseret Whitelisting
-// den Ny der gøre NetShield til den best. 
+// Version 3.5 - Med intelligent Referrer-baseret Whitelisting
+
 /**
  * FUNKTION 1: Fuld AI-Rensning
  * Fjerner alle kendte variationer af Googles AI-svar fra søgeresultater.
@@ -51,7 +49,7 @@ function hideGoogleAiElements() {
 
 /**
  * FUNKTION 2: Cloud Browser Detector
- * Leder efter tegn på, at en side er en "browser i en browser" (Cloud Browser) ja kunne ik skrive så god haha. 
+ * Leder efter tegn på, at en side er en "browser i en browser" (Cloud Browser).
  */
 function checkForCloudBrowser() {
     let cloudScore = 0;
@@ -74,7 +72,7 @@ function checkForCloudBrowser() {
         }
     }
     if (cloudScore >= 5) {
-        console.log(`NetShield: Cloud Browser-lignende indhold fundet! ik så godt hah Score: ${cloudScore}. Blokerer siden.`);
+        console.log(`NetShield: Cloud Browser-lignende indhold fundet! Score: ${cloudScore}. Blokerer siden.`);
         try {
             chrome.runtime.sendMessage({ action: "proxyDetected" });
         } catch (e) {
@@ -85,7 +83,7 @@ function checkForCloudBrowser() {
 
 /**
  * FUNKTION 3: Google Sites Game Portal Detector
- * Køber KUN på sites.google.com og leder efter misbrugs-mønstre. den var lidt svært at lave.
+ * Køber KUN på sites.google.com og leder efter misbrugs-mønstre.
  */
 function checkForGoogleSitesAbuse() {
     if (window.location.hostname !== 'sites.google.com') {
@@ -156,8 +154,59 @@ function checkForGameFingerprints() {
 }
 
 /**
+ * FUNKTION 4: Meta-Data Detektiv (Baseret på din Y9 opdagelse)
+ */
+function checkForGameFingerprints() {
+  let gameScore = 0;
+  
+  // 1. HENT METADATA FRA SIDEN
+  // Vi kigger efter beskrivelse og nøgleord, præcis som i dit eksempel
+  const metaDescription = document.querySelector('meta[name="description"]')?.content.toLowerCase() || "";
+  const metaKeywords = document.querySelector('meta[name="keywords"]')?.content.toLowerCase() || "";
+  const pageTitle = document.title.toLowerCase();
+
+  // 2. LISTEN OVER "AFSLØRENDE ORD" (SEO Keywords)
+  // Disse ord bruger spil-sider for at blive fundet på Google.
+  // Skolesider bruger ALDRIG disse ord sammen.
+  const seoTriggerWords = [
+      "friv",              // Kæmpe rødt flag!
+      "unblocked games",   // De indrømmer det selv
+      "free online games", // Y9 brugte denne
+      "play now for free", // Y9 brugte denne
+      "addicting games",
+      "io games",
+      "best free games",
+      "jogos",             // Portugisisk for spil (meget brugt på Friv-kloner)
+      "y9 games",          // Specifikke portaler
+      "y8 games",
+      "spil gratis onlinespil"
+  ];
+
+  // 3. TJEK FOR MATCH
+  for (const word of seoTriggerWords) {
+      // Tjekker Titel, Beskrivelse og Nøgleord
+      if (pageTitle.includes(word) || metaDescription.includes(word) || metaKeywords.includes(word)) {
+          console.log(`NetShield: Fandt SEO-ordet "${word}". Det er en spil-side.`);
+          gameScore += 10; // BINGO! Vi behøver ikke tælle mere. Det er et spil.
+      }
+  }
+
+  // 4. EKSTRA TJEK (Hvis de prøver at skjule sig, men stadig er spil)
+  if (metaKeywords.includes("game") && metaKeywords.includes("play") && metaKeywords.includes("online")) {
+      gameScore += 5;
+  }
+
+  // 5. AFGØRELSEN
+  if (gameScore >= 5) {
+    console.log(`NetShield: Spil-portal detekteret via Metadata! Score: ${gameScore}.`);
+    try {
+      chrome.runtime.sendMessage({ action: "proxyDetected" });
+    } catch (e) { console.error(e); }
+  }
+}
+/**
  * FUNKTION 5: Proxy Fingerprint Detector
- * Leder efter tegn på en traditionel proxy-side og finder alt tror ik på mig finde en der ik viker så.
+ * Leder efter tegn på en traditionel proxy-side.
  */
 function checkForProxyFingerprints() {
   if (window.location.hostname.includes("google.")) {
@@ -211,8 +260,8 @@ window.addEventListener('load', () => {
     'drive.google.com', 'docs.google.com', 'slides.google.com', 'classroom.google.com',
     'matematikfessor.dk', 'nota.dk', 'grammatip.com', 'ordbogen.com',
     'skoletube.dk', 'gyldendal-uddannelse.dk', 'clio.me', 'systime.dk',
-'accounts.google.com'
-  ];
+'accounts.google.com',
+'testogprøver.dk' ];
 
   // TJEK 1:  kerne-siderne?
   let isCoreSite = false;
@@ -223,7 +272,7 @@ window.addEventListener('load', () => {
     }
   }
 
-  // TJEK 2: kommer vi så fra en kerne-side? det ved jeg ik self
+  // TJEK 2: kommer vi så fra en kerne-side?
   let isReferredFromCoreSite = false;
   if (!isCoreSite && document.referrer) {
     try {
@@ -247,5 +296,6 @@ window.addEventListener('load', () => {
       checkForGoogleSitesAbuse();
       checkForCloudBrowser();
     }, 500);
+   
   }
 });
