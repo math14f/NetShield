@@ -3,13 +3,29 @@
   "properties": {
     "remoteBlocklistUrl": {
       "type": "string",
-      "title": "URL til Sortliste",
-      "description": "Indtast den fulde 'raw' URL til .txt-filen med blokerings-domæner eller bare buge den indbygget man beste at have en ."
+      "title": "URL til Sortliste (Simpel .txt fil)",
+      "description": "Indtast det direkte link ('Raw') til en tekstfil med domæner, der skal blokeres (Prioritet 1). Bruges til daglig vedligeholdelse."
     },
     "remoteAllowlistUrl": {
       "type": "string",
-      "title": "URL til Hvidliste",
-      "description": "Indtast den fulde 'raw' URL til .txt-filen med hvidliste-domæner kun hvis en skole side bliver block eller du vil unblock en der er på lokal liste men det sker ikke."
+      "title": "URL til Hvidliste (Simpel .txt fil)",
+      "description": "Indtast det direkte link ('Raw') til en tekstfil med domæner, der skal tillades (Prioritet 2). Bruges til at åbne skolesider."
+    },
+    "adminBlockedRegex": {
+      "type": "array",
+      "title": "Admin Regex Blokering (Bloker specifikke ord)",
+      "description": "Ord eller mønstre indtastet her bliver blokeret med HØJ prioritet (Prioritet 3). God til at stoppe spil-trends som f.eks. 'y100' eller 'fortnite' uden at opdatere filer.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "adminSuperAllowlist": {
+      "type": "array",
+      "title": "Admin Super Hvidliste (TRUMFER ALT)",
+      "description": "VIGTIGT: Domæner på denne liste vil ALTID virke (Prioritet 4). Denne liste overskriver alle andre blokeringer, inklusiv NetShields indbyggede sikkerhed. Brug denne, hvis en vigtig side bliver blokeret ved en fejl.",
+      "items": {
+        "type": "string"
+      }
     }
-  },
+  }
 }
