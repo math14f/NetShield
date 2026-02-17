@@ -21,7 +21,7 @@ chrome.storage.managed.onChanged.addListener(() => {
     updateBlockingRules();
 });
 
-// Opdaterer automatisk hver time (hvis listerne på nettet ændres)
+// Opdaterer automatisk hver 5. minut  (hvis listerne på nettet ændres)
 chrome.alarms.create('update-lists-alarm', { periodInMinutes: 5 });
 chrome.alarms.onAlarm.addListener(() => updateBlockingRules());
 
@@ -209,3 +209,4 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     }
   }
 });
+
