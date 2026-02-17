@@ -32,7 +32,7 @@ export const allowedSites = [
   "sites.google.com",     // Google Sites (Hjemmesider)
   "keep.google.com",      // Google Keep (Noter)
   "jamboard.google.com",  // Google Jamboard (Digital tavle)
-  "translate.google.com", // Google Translate  "microsoft.com",            
+  "translate.google.com", // Google Translate           
   "learn.microsoft.com", // Adgang til Office 365 (Word, PowerPoint, Excel, Teams)
 
   "accounts.google.com",  // Essentiel for al login og kontostyring
@@ -110,3 +110,4 @@ export const allowedSites = [
 "studio.flux3dp.com",
 "xn--testogprver-ngb.dk",
 ]; 
+
