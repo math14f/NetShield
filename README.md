@@ -1,37 +1,67 @@
-# NetShield - Et Moderne Webfilter til Skolemiljøer
+# NetShield 🛡️
+**Et Moderne, Intelligent og Privatlivs-Sikkert Webfilter til Skolemiljøer**
 
-NetShield er et open-source, intelligent og privatlivs-sikkert webfilter, designet fra bunden til at løse de moderne udfordringer, som danske skoler står over for med webfiltrering.
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/giihajigclffejnamppnoocgchebmagm.svg)](https://chromewebstore.google.com/detail/netshield/giihajigclffejnamppnoocgchebmagm)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Projektet blev startet som en direkte reaktion på de begrænsninger og sårbarheder, der findes i ældre systemer. Målet var at skabe en løsning, der ikke kun er mere effektiv, men også er bygget på principper om datasikkerhed, ydeevne og brugervenlighed for administratorer.
+Er I trætte af webfiltre, der halter bagefter? Filtre, der kræver endeløse manuelle lister, og som eleverne let omgår ved at downloade "offline" filer, bruge ukendte proxy-sider eller skjule sig bag Google Sites?
 
-Hvorfor NetShield?
+**NetShield er løsningen.** Det er ikke bare endnu et simpelt URL-filter; det er en intelligent agent bygget fra bunden på Googles nyeste teknologi (Manifest V3) for at løse den moderne skoles udfordringer proaktivt.
 
-NetShield er designet til at være en komplet afløser for forældede løsninger som LetSpær. Det er teknisk overlegent på alle afgørende punkter:
+---
 
-Moderne & Fremtidssikret: Bygget på Googles nyeste Manifest V3 og den lynhurtige Declarative Net Request API. Dette sikrer maksimal ydeevne uden at gøre browseren langsommere og garanterer, at NetShield vil blive ved med at virke i fremtiden.
+## 🛡️ Nøglefunktioner
 
- 100% Privatlivs-sikker (GDPR-venlig): Takket være DNR API'en kan NetShield teknisk set aldrig se, læse eller logge elevernes browsing-historik. Al filtrering sker lokalt i browserens kerne. Der sendes ingen persondata.
+### 🧠 Intelligent Indholds-Analyse (Content Aware)
+NetShield kigger ikke kun på URL'en, men analyserer sidens adfærd og kode i realtid.
+* **Stopper Proxyer:** Genkender de tekniske "fingeraftryk" fra avancerede unblockers (f.eks. Ultraviolet, BareMux, Rammerhead), selv når de hostes på helt nye eller skjulte domæner.
+* **Fanger Spil proaktivt:** Identificerer spil-portaler ved at scanne metadata og teknologier (Unity WebGL, Canvas), så uskyldige undervisnings-sites går fri.
+* **Sikrer Google Sites:** Opdager automatisk, når platforme som Google Sites misbruges til at hoste spil eller proxyer.
 
- Intelligent & Proaktiv Blokering: Bruger avancerede Regex-mønstre til at genkende og blokere tusindvis af ukendte proxy-sider, omgåelses-værktøjer og nye trusler, i det øjeblik de dukker op.
+### 🔎 Google Uden Snyd (Behold 'Alle' fanen)
+I stedet for at blokere hele Google.com eller tvinge elever over i specifikke faner, renser NetShield søgningen kirurgisk.
+* **Fjerner AI-Svar:** Skjuler automatisk "AI-oversigter" på tværs af sprog, så eleverne ikke får serveret det færdige svar. Understøtter også snart Bing Copilot og Ecosia.
+* **Bevarer Værktøjerne:** Lader Google-værktøjer som ordbøger, lommeregner og fakta-bokse forblive intakte til gavn for undervisningen.
 
- Avanceret Indholds-Analyse: En indbygget "agent" scanner aktivt hjemmesider for at finde skjulte trusler. Den kan:
-Fjerne Google AI-oversigter: Fjerner dynamisk de AI-genererede svar direkte fra Googles søgeresultater for at modvirke snyd.
-Identificere skjulte proxy-sider: Genkender de tekniske "fingeraftryk" fra proxy-scripts, selv på sider med uskyldige navne.
-Opdage spil-portaler: Genkender spil baseret på den teknologi, de er bygget med (f.eks. Unity, Canvas), ikke kun deres navn.
+### 📂 Offline & Lokal Sikkerhed (Zero-Config)
+Elever omgår ofte traditionelle filtre ved at gemme proxy-filer lokalt på computeren.
+* **Fil-Vagt (Ny i v3.5):** NetShield overvåger browseren for lokale HTML-filer (`file://`) og cloaked sider (`about:blank`), der forsøger at agere browsere, og blokerer dem øjeblikkeligt.
+* **Klar til brug:** Kræver ikke, at IT-afdelingen manuelt aktiverer "Allow access to file URLs" i Google Workspace.
 
- Total Kontrol for Administratorer: NetShield er designet til central styring via Google Admin. Administratorer kan fjernstyre simple sort- og hvidlister via eksterne tekstfiler, hvilket gør daglig vedligeholdelse utrolig nem og hurtig.
+---
 
- Multi-Lags Forsvar: Et avanceret prioritetssystem med separate, specialiserede regelsæt (lokal/fjern, sortliste/hvidliste, force-block, billed-blokering) sikrer maksimal beskyttelse uden at blokere for kritisk undervisningsmateriale.
+## ⚙️ Total Kontrol for IT-Administratorer
 
-Arkitektur
+NetShield er designet til Enterprise-styring via Google Workspace. Gennem `schema.json` får IT-afdelingen fuld kontrol over udrulningen:
+* **Admin Regex:** Tilføj hurtigt ord (f.eks. "fortnite"), der skal blokeres på tværs af alle domæner.
+* **Super Hvidliste (Prioritet 4):** En "Nødbremse", der tvinger adgang til vitale sider, uanset hvad filterets indbyggede logik ellers dikterer. IT har altid det sidste ord.
+* **Fjernstyrede Lister:** Peg på simple `.csv`-filer for at opdatere sort- og hvidlister globalt på sekunder uden at røre ved selve udvidelsen.
 
-NetShield er bygget på en separat arkitektur, der adskiller den indbyggede, intelligente motor fra de simple, admin-styrede lister:
-Den Lokale Motor (Udvikler-styret): De lokale .js-filer indeholder de avancerede, kraftfulde Regex-regler og den grundlæggende funktionalitet. Dette er NetShields "hjerne".
+---
 
-De Fjernstyrede Lister (Admin-styret): Via Google Admin kan administratoren pege på simple .txt-filer. Disse bruges til hurtigt at tilføje specifikke domæner til sort- eller hvidlisten uden at skulle redigere i koden.
+## 🔒 Arkitektur & Privatliv (Privacy by Design)
 
-Dette design sikrer en robust, fejlsikker og ekstremt fleksibel platform.
+Datasikkerhed er kernen i NetShield. I modsætning til ældre løsninger ("Forensic Logging"), der overvåger og logger elevernes adfærd, arbejder NetShield ud fra princippet om at *fjerne fristelsen*.
 
-Status
-Version 3.5 er i øjeblikket under gennemgang i Chrome Web Store. link https://chromewebstore.google.com/detail/netshield/giihajigclffejnamppnoocgchebmagm?authuser=0&hl=da
-og Version 3.6 er under udvikling man kommer snart
+* **100% GDPR-sikker:** Vi indsamler, gemmer eller sender INGEN browsing-historik eller personlige data.
+* **Lokal Afvikling:** Al filtrering sker lokalt i browserens kerne via **Declarative Net Request API**. Ingen elevdata forlader enheden.
+* **Fremtidssikret & Lynhurtig:** Bygget eksklusivt på **Manifest V3**. Dette sikrer maksimal ydeevne uden at dræne Chromebookens batteri eller CPU, og garanterer kompatibilitet langt ind i fremtiden.
+
+---
+
+## 🚀 Status & Installation
+
+* **Version 3.5** er live og kan installeres via Chrome Web Store.
+* **Version 3.6** er under aktiv udvikling.
+
+👉 **[Installer NetShield fra Chrome Web Store her](https://chromewebstore.google.com/detail/netshield/giihajigclffejnamppnoocgchebmagm)**
+
+---
+
+## 🤝 Bidrag & Kontakt
+
+NetShield er Open Source (MIT Licens), og hele kildekoden kan inspiceres af enhver IT-afdeling for fuld transparens. 
+
+Skoler og kommuner opfordres til at bidrage eller forke projektet. Læs venligst vores [CONTRIBUTING.md](CONTRIBUTING.md) før du opretter en Pull Request.
+
+*Udviklet med stolthed i Thisted for at sikre danske skolers digitale arbejdsmiljø.*
