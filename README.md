@@ -20,7 +20,7 @@ NetShield kigger ikke kun på URL'en, men analyserer sidens adfærd og kode i re
 
 ### 🔎 Google Uden Snyd (Behold 'Alle' fanen)
 I stedet for at blokere hele Google.com eller tvinge elever over i specifikke faner, renser NetShield søgningen kirurgisk.
-* **Fjerner AI-Svar:** Skjuler automatisk "AI-oversigter" på tværs af sprog, så eleverne ikke får serveret det færdige svar. Understøtter også snart Bing Copilot og Ecosia.
+* **Fjerner AI-Svar:** Skjuler automatisk "AI-oversigter" på tværs af sprog, så eleverne ikke får serveret det færdige svar. Understøtter også Bing Copilot og Ecosia.
 * **Bevarer Værktøjerne:** Lader Google-værktøjer som ordbøger, lommeregner og fakta-bokse forblive intakte til gavn for undervisningen.
 
 ### 📂 Offline & Lokal Sikkerhed (Zero-Config)
@@ -51,8 +51,8 @@ Datasikkerhed er kernen i NetShield. I modsætning til ældre løsninger ("Foren
 
 ## 🚀 Status & Installation
 
-* **Version 3.5** er live og kan installeres via Chrome Web Store.
-* **Version 3.6** er under aktiv udvikling.
+* **Version 3.7** er live og kan installeres via Chrome Web Store.
+* **Version 3.8** er under aktiv udvikling.
 
 👉 **[Installer NetShield fra Chrome Web Store her](https://chromewebstore.google.com/detail/netshield/giihajigclffejnamppnoocgchebmagm)**
 
