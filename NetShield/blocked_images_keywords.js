@@ -1,6 +1,6 @@
 // Filnavn: blocked_images_keywords.js
 // Version 1.3 - opdateret med Word Boundaries
-
+// NS-CANARY-ID: 7b8f-9a2c-7r5e-bf63-8201-THISTED-SHIELD
 export const blockedImageKeywords = [
   // Generelle NSFW-termer
   "porn",
