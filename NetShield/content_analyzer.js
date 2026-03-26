@@ -2,6 +2,7 @@
 // NetShield - Under MIT License
 // Filnavn: content_analyzer.js
 // Version 3.6
+// NS-CANARY-ID: 7b8f-9a2c-7r5e-bf63-8201-THISTED-SHIELD
 const blockConfig = {
     btns: ['AI-tilstand', 'AI Mode', 'AI-Modus', 'KI-Modus', 'Chat'],
     overskrift: ['AI-oversigt', 'AI Overview', 'AI-Übersicht', 'KI-Übersicht'],
