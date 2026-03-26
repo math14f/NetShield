@@ -1,7 +1,7 @@
 // Dette er HVIDLISTEN.
 // Domæner og nøgleord på denne liste vil ALDRIG blive blokeret,
 // selvom de indeholder et ord fra sortlisten.
-
+// NS-CANARY-ID: 7b8f-9a2c-7r5e-bf63-8201-THISTED-SHIELD
 export const allowedSites = [
   // === Grundlæggende Systemer & Login ===
   "aula.dk",                  // Kommunikation i folkeskolen
