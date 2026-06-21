@@ -2,7 +2,7 @@
 // NetShield - Under MIT License
 // Filnavn: background.js
 // NS-CANARY-ID: 7b8f-9a2c-7r5e-bf63-8201-THISTED-SHIELD
-// Version 3.8 - Optimeret med CSV-Sync, Forbedret DNR & about:blank Vagt
+// Version 3.9 - Optimeret med CSV-Sync, Forbedret DNR & about:blank Vagt
 
 import { blockedSites as localRegexBlockedSites } from './blocked_sites.js';
 import { allowedSites as localAllowedSites } from './allowed_sites.js';
