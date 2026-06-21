@@ -17,6 +17,7 @@ NetShield kigger ikke kun på URL'en, men analyserer sidens adfærd og kode i re
 * **Stopper Proxyer:** Genkender de tekniske "fingeraftryk" fra avancerede unblockers (f.eks. Ultraviolet, BareMux, Rammerhead), selv når de hostes på helt nye eller skjulte domæner.
 * **Fanger Spil proaktivt:** Identificerer spil-portaler ved at scanne metadata og teknologier (Unity WebGL, Canvas), så uskyldige undervisnings-sites går fri.
 * **Sikrer Google Sites:** Opdager automatisk, når platforme som Google Sites misbruges til at hoste spil eller proxyer.
+* **Iframe-beskyttelse (Ny i v3.9):** Patcher automatisk `HTMLIFrameElement.prototype` for at forhindre, at avancerede proxies kan køre skjult inde i ellers godkendte iframes ved at omgå filteret.
 
 ### 🔎 Google Uden Snyd (Behold 'Alle' fanen)
 I stedet for at blokere hele Google.com eller tvinge elever over i specifikke faner, renser NetShield søgningen kirurgisk.
@@ -26,6 +27,7 @@ I stedet for at blokere hele Google.com eller tvinge elever over i specifikke fa
 ### 📂 Offline & Lokal Sikkerhed (Zero-Config)
 Elever omgår ofte traditionelle filtre ved at gemme proxy-filer lokalt på computeren.
 * **Fil-Vagt (Ny i v3.5):** NetShield overvåger browseren for lokale HTML-filer (`file://`) og cloaked sider (`about:blank`), der forsøger at agere browsere, og blokerer dem øjeblikkeligt.
+* **Skoleside-sikring (Ny i v3.9):** Intelligent tjek af fanens hoved-URL og referrer (henviser). Dette sikrer, at godkendte skoleportaler (som f.eks. Aula, Lectio og duda.dk) **aldrig** bliver fejlblokeret, selvom de indlæser eksternt indhold i iframes.
 * **Klar til brug:** Kræver ikke, at IT-afdelingen manuelt aktiverer "Allow access to file URLs" i Google Workspace.
 
 ---
@@ -34,7 +36,7 @@ Elever omgår ofte traditionelle filtre ved at gemme proxy-filer lokalt på comp
 
 NetShield er designet til Enterprise-styring via Google Workspace. Gennem `schema.json` får IT-afdelingen fuld kontrol over udrulningen:
 * **Admin Regex:** Tilføj hurtigt ord (f.eks. "fortnite"), der skal blokeres på tværs af alle domæner.
-* **Super Hvidliste (Prioritet 4):** En "Nødbremse", der tvinger adgang til vitale sider, uanset hvad filterets indbyggede logik ellers dikterer. IT har altid det sidste ord.
+* **Super Hvidliste (Prioritet 4):** En "Nødbremse", der tvinger adgang til vitale sider, uanset hvad filterets indbyggede logik ellers dikterer. IT has altid det sidste ord.
 * **Fjernstyrede Lister:** Peg på simple `.csv`-filer for at opdatere sort- og hvidlister globalt på sekunder uden at røre ved selve udvidelsen.
 
 ---
@@ -51,8 +53,8 @@ Datasikkerhed er kernen i NetShield. I modsætning til ældre løsninger ("Foren
 
 ## 🚀 Status & Installation
 
-* **Version 3.7** er live og kan installeres via Chrome Web Store.
-* **Version 3.8** er under aktiv udvikling.
+* **Version 3.9** er live og kan installeres via Chrome Web Store.
+* **Version 4.0** er under planlægning.
 
 👉 **[Installer NetShield fra Chrome Web Store her](https://chromewebstore.google.com/detail/netshield/giihajigclffejnamppnoocgchebmagm)**
 
