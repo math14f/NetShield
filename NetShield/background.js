@@ -15,6 +15,8 @@ let cachedRemoteBlocks = [];
 let cachedRemoteAllows = [];
 let cachedAdminSuperAllowlist = [];
 let lastFetchTime = 0;
+let isUpdatingRules = false;
+let pendingUpdate = false;
 
 chrome.runtime.onInstalled.addListener(() => {
   console.log("NetShield (v3.8) er installeret. Opbygger regler...");
