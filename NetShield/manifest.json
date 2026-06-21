@@ -2,7 +2,7 @@
   "update_url": "https://clients2.google.com/service/update2/crx",
   "manifest_version": 3,
   "name": "NetShield",
-  "version": "3.9",
+  "version": "3.9.1",
   "description": "Til Skoler. Blokerer proaktivt proxy, spil og AI lokalt. Med Admin-styrede Pausetider.",
 
 
