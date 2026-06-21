@@ -25,13 +25,21 @@
     "type": "module"
   },
 
-  "content_scripts": [
+   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content_analyzer.js"],
       "run_at": "document_start",
       "match_about_blank": true,
       "all_frames": true
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_analyzer_main.js"],
+      "run_at": "document_start",
+      "match_about_blank": true,
+      "all_frames": true,
+      "world": "MAIN"
     }
   ],
   
@@ -42,7 +50,7 @@
   "storage": {
     "managed_schema": "schema.json"
   },
-
+  
   "web_accessible_resources": [
     {
       "resources": ["blocked.html"],
