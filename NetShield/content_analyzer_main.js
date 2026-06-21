@@ -1,3 +1,8 @@
+// Copyright (c) 2026 Mathias Andersen - All Rights Reserved
+// NetShield - Under MIT License
+// Filnavn: content_analyzer_main.js
+// NS-CANARY-ID: 7b8f-9a2c-7r5e-bf63-8201-THISTED-SHIELD
+// Version 3.8
 function reportViolation(reason) {
     try {
         document.dispatchEvent(new CustomEvent('NetShieldViolation', { detail: { reason: reason } }));
