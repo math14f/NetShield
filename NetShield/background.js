@@ -1,4 +1,4 @@
-// Copyright (c) 2025 Mathias Andersen - All Rights Reserved
+// Copyright (c) 2026 Mathias Andersen - All Rights Reserved
 // NetShield - Under MIT License
 // Filnavn: background.js
 // NS-CANARY-ID: 7b8f-9a2c-7r5e-bf63-8201-THISTED-SHIELD
