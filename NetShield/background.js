@@ -109,8 +109,6 @@ async function getNetworkTime() {
 }
 
 
-let isUpdatingRules = false;
-let pendingUpdate = false;
 
 async function updateBlockingRules() {
   if (isUpdatingRules) {
