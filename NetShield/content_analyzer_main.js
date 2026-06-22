@@ -417,7 +417,7 @@ if (!isSafeSchoolSite()) {
                             win.fetch = async function(resource, config) {
                                 const url = (typeof resource === 'string') ? resource : (resource?.url || '');
                                 if (NETSHIELD_CONFIG.blockedUrlPatterns.some(pattern => url.includes(pattern))) {
-                                    return Promise.reject("Blocked by LetSpær");
+                                    return Promise.reject("Blocked by NetShield");
                                 }
                                 return OriginalIframeFetch.apply(this, arguments);
                             };
